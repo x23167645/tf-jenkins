@@ -18,7 +18,7 @@ pipeline {
   stages {
     stage('Clone Code') {
       steps {
-        git credentialsId: "${GIT_CREDENTIALS_ID}", url: 'https://github.com/x23167645/terraform-jenkins.git', branch: 'main'
+        git credentialsId: "${GIT_CREDENTIALS_ID}", url: 'https://github.com/x23167645/tf-jenkins.git', branch: 'main'
       }
     }
 
@@ -54,4 +54,4 @@ pipeline {
       }
     }
   }
-}
+} 
