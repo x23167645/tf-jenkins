@@ -49,7 +49,7 @@ pipeline {
       steps {
         input message: 'Proceed with Destroy?'
         withEnv(["TF_VAR_admin_password=${ADMIN_PASSWORD}"]) {
-          sh 'terraform apply -auto-approve -var-file="terraform.tfvars"'
+          sh 'terraform destroy -auto-approve -var-file="terraform.tfvars"'
         }
       }
     }
